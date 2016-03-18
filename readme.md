@@ -95,27 +95,27 @@ All test cards use the address "88" and postcode "412".
 
 Full details of Stipe's test cards can be found on their [Testing](https://stripe.com/docs/testing) page of their documentation.
 
-Card Type            | Card Number                           | CVV2
-:--------------------|:--------------------------------------|:----
-American Express     | 378282246310005 and 371449635398431   | Any
-Diners Club          | 30569309025904 and 38520000023237     | Any
-Discover             | 6011111111111117 and 6011000990139424 | Any
-JCB                  | 3530111333300000 and 3566002020360505 | Any
-MasterCard           | 5555555555554444                      | Any
-MasterCard (Debit)   | 5200828282828210                      | Any
-MasterCard (Prepaid) | 5105105105105100                      | Any
-Visa                 | 4242424242424242 and 4012888888881881 | Any
-Visa (Debit)         | 4000056655665556                      | Any
+Card Type            | Card Number
+:--------------------|:--------------------------------------
+American Express     | 378282246310005 and 371449635398431
+Diners Club          | 30569309025904 and 38520000023237
+Discover             | 6011111111111117 and 6011000990139424
+JCB                  | 3530111333300000 and 3566002020360505
+MasterCard           | 5555555555554444
+MasterCard (Debit)   | 5200828282828210
+MasterCard (Prepaid) | 5105105105105100
+Visa                 | 4242424242424242 and 4012888888881881
+Visa (Debit)         | 4000056655665556
 
 ### WePay
 
 Full details of WePay's test cards can be found on their [Testing](https://www.wepay.com/developer/reference/testing) page of their documentation.
 
-Card Type            | Card Number
-:--------------------|:-----------------------------------
-American Express     | 378282246310005 and 371449635398431
-MasterCard           | 5496198584584769
-Visa                 | 4003830171874018
+Card Type            | Card Number                         | CVV2
+:--------------------|:------------------------------------|:----
+American Express     | 378282246310005 and 371449635398431 | Any
+MasterCard           | 5496198584584769                    | Any
+Visa                 | 4003830171874018                    | Any
 
 ### WorldPay
 
