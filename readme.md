@@ -13,6 +13,7 @@ A list of available test payment cards for various payment gateways. Please feel
     - [Saferpay](#saferpay)
     - [SagePay](#sagepay)
     - [Stripe](#stripe)
+    - [WePay](#wepay)
     - [WorldPay](#worldpay)
 - [License](#license)
 
@@ -75,8 +76,8 @@ The last two digits of the AMOUNT attributes define the result code of the autho
 
 ### SagePay
 
-Card Type               | Card Number         | Issue | CV2
-:-----------------------|:--------------------|:------|:---
+Card Type               | Card Number         | Issue | CVV2
+:-----------------------|:--------------------|:------|:----
 American Express        | 374200000000004     |       | 123
 Diner's Club            | 36000000000008      |       | 123
 JCB                     | 3569990000000009    |       | 123
@@ -106,6 +107,15 @@ MasterCard (Prepaid) | 5105105105105100
 Visa                 | 4242424242424242 and 4012888888881881
 Visa (Debit)         | 4000056655665556
 
+### WePay
+
+Full details of WePay's test cards can be found on their [Testing](https://www.wepay.com/developer/reference/testing) page of their documentation.
+
+Card Type            | Card Number                         | CVV2
+:--------------------|:------------------------------------|:----
+American Express     | 378282246310005 and 371449635398431 | Any
+MasterCard           | 5496198584584769                    | Any
+Visa                 | 4003830171874018                    | Any
 
 ### WorldPay
 
