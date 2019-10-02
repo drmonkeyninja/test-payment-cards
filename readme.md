@@ -156,9 +156,9 @@ Change the last 3 digits of the card number for the payment to be rejected with 
 
 ### GlobalPayments
 
-The following test cards are for Bambora as defined on their [developers site](https://developer.realexpayments.com/#!/resources/test-card-numbers). You can enter any cardholder name, security code and future dated expiry.
+The following test cards are for GlobalPayments as defined on their [developer portal](https://developer.realexpayments.com/#!/resources/test-card-numbers). You can enter any cardholder name, security code (CVV2) and future dated expiry.
 
-Card Type         | Card Number      | Result           | Code             | Description
+Card Type         | Card Number      | Result           | Return Code             | Description
 :-----------------|:-----------------|:-----------------|:-----------------|:-----------------
 American Express  | 374101000000608  | Successful       | 00               | Successful transaction
 American Express  | 376525000000010  | Declined         | 101              | Declined by the bank
