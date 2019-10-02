@@ -13,6 +13,7 @@ A list of available test payment cards for various payment gateways. Please feel
     - [CyberSource](#cybersource)
     - [eMerchantPay](#emerchantpay)
     - [ePay](#epay)
+    - [GlobalPayments](#globalpayments)
     - [Klarna](#klarna)
     - [NetPay](#netpay)
     - [Ogone](#ogone)
@@ -151,6 +152,47 @@ Visa / Dankort       | 4444444444444000
 MasterCard           | 5555555555555000
 
 Change the last 3 digits of the card number for the payment to be rejected with the error code represented by the changed digits.
+
+
+### GlobalPayments
+
+The following test cards are for Bambora as defined on their [developers site](https://developer.realexpayments.com/#!/resources/test-card-numbers). You can enter any cardholder name, security code and future dated expiry.
+
+Card Type         | Card Number      | Result           | Code             | Description
+:-----------------|:-----------------|:-----------------|:-----------------|:-----------------
+American Express  | 374101000000608  | Successful       | 00               | Successful transaction
+American Express  | 376525000000010  | Declined         | 101              | Declined by the bank
+American Express  | 375425000000907  | Declined         | 102              | Referral B
+American Express  | 343452000000306  | Declined         | 103              | Referral A - Card reported lost/stolen
+American Express  | 372349000000852  | Declined         | 200              | Communication Error
+Diners Club       | 36256000000725   | Successful       | 00               | Successful transaction
+Diners Club       | 36256000000998   | Declined         | 101              | Declined by the bank
+Diners Club       | 36256000000634   | Declined         | 102              | Referral B
+Diners Club       | 38865000000705   | Declined         | 103              | Referral A - Card reported lost/stolen
+Diners Club       | 30450000000985   | Declined         | 200              | Communication Error
+Discover          | 6011000000000087 | Successful       | 00               | Successful transaction
+Discover          | 6011000000001010 | Declined         | 101              | Declined by the bank
+Discover          | 6011000000001028 | Declined         | 102              | Referral B
+Discover          | 6011000000001036 | Declined         | 103              | Referral A - Card reported lost/stolen
+Discover          | 6011000000002000 | Declined         | 200              | Communication Error
+JCB               | 3566000000000000 | Successful       | 00               | Successful transaction
+JCB               | 3566000000001016 | Declined         | 101              | Declined by the bank
+JCB               | 3566000000001024 | Declined         | 102              | Referral B
+JCB               | 3566000000001032 | Declined         | 103              | Referral A - Card reported lost/stolen
+JCB               | 3566000000002006 | Declined         | 200              | Communication Error
+Mastercard        | 5425230000004415 | Successful       | 00               | Successful transaction
+Mastercard        | 5114610000004778 | Declined         | 101              | Declined by the bank
+Mastercard        | 5114630000009791 | Declined         | 102              | Referral B
+Mastercard        | 5121220000006921 | Declined         | 103              | Referral A - Card reported lost/stolen
+Mastercard        | 5135020000005871 | Declined         | 200              | Communication Error
+Mastercard        | 5100000000000131 | Declined         | 111              | SCA Required
+Visa              | 4263970000005262 | Successful       | 00               | Successful transaction
+Visa              | 4000120000001154 | Declined         | 101              | Declined by the bank
+Visa              | 4000130000001724 | Declined         | 102              | Referral B
+Visa              | 4000160000004147 | Declined         | 103              | Referral A - Card reported lost/stolen
+Visa              | 4009830000001985 | Declined         | 200              | Communication Error
+Visa              | 4242420000000091 | Declined         | 111              | SCA Required
+
 
 ### Klarna
 
