@@ -19,6 +19,7 @@ A list of available test payment cards for various payment gateways. Please feel
     - [Klarna](#klarna)
     - [Monetico](#monetico)
     - [NetPay](#netpay)
+    - [Nuvei](#nuvei)
     - [Ogone](#ogone)
     - [Pay360](#pay360)
     - [PayPal](#paypal)
@@ -282,6 +283,99 @@ Visa Credit         | 4715059999000437    | Expiry driven card credit
 Visa Debit          | 4917480000000008    | Expiry driven card
 Visa Debit          | 4539791001730106    | Expiry driven card (3ds registered)
 Visa Debit          | 4508750015741019    | Expiry driven card
+
+### Nuvei
+
+Nuvei provides test card numbers for simulating and testing transaction scenarios in the Nuvei integration environment. CVV and card expiry dates are mandatory, but can be any valid value.
+
+For non-3D-Secure transactions which return an approved result:
+
+Card Type        | Card Number      | Notes
+:----------------|:-----------------|:-------------------
+American Express | 375510513169537  | 
+American Express | 375510288656924  | 
+American Express | 375510379996452  | 
+American Express | 375510082116984  | 
+Mastercard       | 5101081046006034 | 
+Mastercard       | 5101084411423750 | 
+Mastercard       | 5333304500657872 | 
+Mastercard       | 5333308664112277 | 
+Mastercard       | 5550345228382224 | 
+Mastercard       | 5550347471347813 | 
+Mastercard       | 2222755234426838 | 
+Mastercard       | 2221004483162815 | 
+Visa             | 4761344136141390 | 
+Visa             | 4761201381475297 | 
+Visa             | 4159129252458086 | 
+Visa             | 4123407439043051 | 
+Visa             | 4001888687412469 | 
+Visa             | 4444493318246892 | 
+Visa             | 4000996174334475 | Partial approval
+Visa             | 5333608104136723 | Partial approval
+
+For non-3D-Secure transactions which return a declined result:
+
+Card Type        | Card Number                           | Decline Reason
+:----------------|:--------------------------------------|:-------------------
+American Express | 375521501910816                       | Decline
+American Express | 375522679892992                       | External Error in Processing
+American Express | 375523500980436                       | Acquirer Validation
+American Express | 375525991062202                       | Lost/Stolen
+American Express | 375526064276158 (Germany)             | Do Not Honor
+American Express | 375527639875136 (Ireland)             | Insufficient Funds
+American Express | 375528929838107 (Ireland)             | Exceeds Withdrawal Limit
+American Express | 375529856696120 (Ireland)             | Exceeds Withdrawal Frequency
+American Express | 375530796593260                       | Invalid Transaction
+American Express | 375531494255517 (Indonesia)           | Format Error
+American Express | 375532604034750                       | Issuer or Switch Inoperative
+American Express | 375533558061005 (Greece)              | Timeout/Retry
+American Express | 375534876707683 (Greece)              | Expired Card
+American Express | 375535264614027 (Greece)              | Transaction Not Permitted To Cardholder
+American Express | 375536629108788 (Greece)              | Transaction Not Permitted on Terminal
+American Express | 375537795464104 (Greece)              | Restricted Card
+American Express | 375538733297606 (Greece)              | Invalid CVV
+Mastercard       | 5333418445863914 (Russian Federation) | Decline
+Mastercard       | 5001638548736201 (UK)                 | Decline
+Mastercard       | 5118081410264525 (UK)                 | Soft Decline - Authentication is Advised
+Mastercard       | 5109486948867999 (US)                 | Soft Decline - Authentication is Advised
+Mastercard       | 5333423768173347 (US)                 | External Error in Processing
+Mastercard       | 5100976565928800 (UK)                 | External Error in Processing
+Mastercard       | 5333435197139699 (US)                 | Acquirer Validation
+Mastercard       | 5333452804487502 (US)                 | Lost/Stolen
+Mastercard       | 5333463046218753 (US)                 | Do Not Honor
+Mastercard       | 5333475572200849 (US)                 | Insufficient Funds
+Mastercard       | 5333482348715142 (US)                 | Exceeds Withdrawal Limit
+Mastercard       | 5333498929343773 (South Korea)        | Exceeds Withdrawal Frequency
+Mastercard       | 5333502383316074 (Puerto Rico)        | Invalid Transaction
+Mastercard       | 5333518577223892 (US)                 | Format Error
+Mastercard       | 5333527145351713 (Costa Rica)         | Issuer or Switch Inoperative
+Mastercard       | 5333532915594096 (US)                 | Timeout/Retry
+Mastercard       | 5333540337444022 (US)                 | Expired Card
+Mastercard       | 5333554636535091 (US)                 | Transaction Not Permitted To Cardholder
+Mastercard       | 5333562868563707 (US)                 | Transaction Not Permitted on Terminal
+Mastercard       | 5333562868563707 (US)                 | Restricted Card
+Mastercard       | 5333583123003909 (US)                 | Invalid CVV
+Visa             | 4008370896662369 (UK)                 | Decline
+Visa             | 4021937195658141 (UK)                 | Soft Decline - Authentication is Advised
+Visa             | 4217641329972469 (US)                 | Soft Decline - Authentication is Advised
+Visa             | 4000128449498204 (US)                 | External Error in Processing
+Visa             | 4000135814550378 (US)                 | Acquirer Validation
+Visa             | 4000157454627969 (US)                 | Lost/Stolen
+Visa             | 4000164166749263 (India)              | Do Not Honor
+Visa             | 4000173946194872 (India)              | Insufficient Funds
+Visa             | 4008384424370890 (UK)                 | Insufficient Funds
+Visa             | 4000189336416410 (India)              | Exceeds Withdrawal Limit
+Visa             | 4000196948974975 (India)              | Exceeds Withdrawal Frequency
+Visa             | 4000203016321921 (US)                 | Invalid Transaction
+Visa             | 4000212384978055 (US)                 | Format Error
+Visa             | 4000229544877670 (US)                 | Issuer or Switch Inoperative
+Visa             | 4000234977370839 (US)                 | Timeout/Retry
+Visa             | 4000247422310226 (US)                 | Expired Card
+Visa             | 4000254588011960 (US)                 | Transaction Not Permitted To Cardholder
+Visa             | 4000269084739575 (US)                 | Transaction Not Permitted on Terminal
+Visa             | 4000273652260030 (US)                 | Restricted Card
+
+Full details of Nuvei's test cards can be found on the [Testing Cards]([https://www.wepay.com/developer/reference/testing](https://docs.nuvei.com/documentation/guides/testing/testing-cards/) page of their documentation.
 
 ### Ogone
 
