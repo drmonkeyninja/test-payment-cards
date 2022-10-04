@@ -10,11 +10,16 @@ A list of available test payment cards for various payment gateways. Please feel
     - [Bambora](#bambora)
     - [Braintree](#braintree)
     - [Cashnet](#cashnet)
+    - [ChargeBee](#chargebee)
+    - [Concardis](#concardis)
     - [CyberSource](#cybersource)
     - [eMerchantPay](#emerchantpay)
     - [ePay](#epay)
+    - [GlobalPayments](#globalpayments)
     - [Klarna](#klarna)
+    - [Monetico](#monetico)
     - [NetPay](#netpay)
+    - [Nuvei](#nuvei)
     - [Ogone](#ogone)
     - [Pay360](#pay360)
     - [PayPal](#paypal)
@@ -25,7 +30,7 @@ A list of available test payment cards for various payment gateways. Please feel
     - [SagePay](#sagepay)
     - [SecurePay](#securepay)
     - [Stripe](#stripe)
-    - [Trustpay Global](#trustpay-global)
+    - [Trustpay Global (PinPay)](#trustpay-global-pinpay)
     - [WePay](#wepay)
     - [WorldPay](#worldpay)
 - [Further Resources](#further-resources)
@@ -96,6 +101,44 @@ Card Number      | Expiry Date
 
 **Note** CVV in production, but not in test.
 
+### ChargeBee
+
+The following test cards are for ChargeBee as defined in their [docs](https://www.chargebee.com/docs/cards.html):
+
+Card Type  | Card Number      | Response
+:----------|:-----------------|:---------
+AMEX       | 378282246310005  | Success
+Diners     | 38520000023237   | Success
+Discover   | 6011111111111117 | Success
+JCB        | 3530111333300000 | Success
+MasterCard | 5555555555554444 | Success
+Visa       | 4111111111111111 | Success
+Visa       | 4119862760338320 | Card Storage will fail with a gateway verification failure
+Visa       | 4005519200000004 | Charge attempts will fail with an "Insufficient funds" error
+
+### Concardis
+
+Test cards for [www.concardis.com](https://www.concardis.com/).
+
+| Card | PAN | CVC | Exp date |
+|--------------------------------------------------|------------------|-----|----------|
+| VISA Non-3DS | 4012001038443335 | 123 | 12/21 |
+| VISA 3DS 1.0 | 4149011500000147 | 123 | 12/21 |
+| VISA 3DS 2.0 - Frictionless Flow | 4111111111111111 | 123 | 12/21 |
+| VISA 3DS 2.0 - Challenge Flow | 4000007000000031 | 123 | 12/21 |
+| Master Card Non-3DS | 5399999999999999 | 123 | 12/21 |
+| Master Card 3DS 1.0 | 5232569007637831 | 123 | 12/21 |
+| Master Card 3DS 2.0 - Frictionless Flow | 5556011778787485 | 123 | 12/21 |
+| Master Card 3DS 2.0 - Challenge Flow | 2720992593319364 | 123 | 12/21 |
+| American Express Non-SafeKey | 374111111111111 | 123 | 12/21 |
+| American Express SafeKey 1.0 | 373953192351004 | 123 | 12/21 |
+| American Express SafeKey 2.0 - Frictionless Flow | 371449635398431 | 123 | 12/21 |
+| American Express SafeKey 2.0 - Challenge Flow | 346018484777573 | 123 | 12/21 |
+| Maestro Non-3DS | 6400051234567895 | - | - |
+| VISA Debit Non-3DS | 4462030000000000 | 123 | 12/21 |
+
+Further details about using Concardis test payment cards can be found on their [REST API simulator page](https://docs.payengine.de/buildyourown/restdoc/simulator).
+
 ### CyberSource
 
 Further information about testing, including this list of valid test credit card numbers, can be found at the [CyberSource Developer Center](https://www.cybersource.com/developers/).
@@ -115,7 +158,7 @@ VISA                    | 4111111111111111
 
 Test cards for [www.emerchantpay.com](https://www.emerchantpay.com).
 
-Card Number(s)   | Card Type   | Transaction Result 
+Card Number(s)   | Card Type   | Transaction Result
 :----------------|:----------- |:----------------------
 4200000000000000 | Visa        | successful transaction
 4111111111111111 | Visa        | transaction declined
@@ -152,6 +195,47 @@ MasterCard           | 5555555555555000
 
 Change the last 3 digits of the card number for the payment to be rejected with the error code represented by the changed digits.
 
+
+### GlobalPayments
+
+The following test cards are for GlobalPayments as defined on their [developer portal](https://developer.realexpayments.com/#!/resources/test-card-numbers). You can enter any cardholder name, security code (CVV2) and future dated expiry.
+
+Card Type         | Card Number      | Result           | Return Code             | Description
+:-----------------|:-----------------|:-----------------|:-----------------|:-----------------
+American Express  | 374101000000608  | Successful       | 00               | Successful transaction
+American Express  | 376525000000010  | Declined         | 101              | Declined by the bank
+American Express  | 375425000000907  | Declined         | 102              | Referral B
+American Express  | 343452000000306  | Declined         | 103              | Referral A - Card reported lost/stolen
+American Express  | 372349000000852  | Declined         | 200              | Communication Error
+Diners Club       | 36256000000725   | Successful       | 00               | Successful transaction
+Diners Club       | 36256000000998   | Declined         | 101              | Declined by the bank
+Diners Club       | 36256000000634   | Declined         | 102              | Referral B
+Diners Club       | 38865000000705   | Declined         | 103              | Referral A - Card reported lost/stolen
+Diners Club       | 30450000000985   | Declined         | 200              | Communication Error
+Discover          | 6011000000000087 | Successful       | 00               | Successful transaction
+Discover          | 6011000000001010 | Declined         | 101              | Declined by the bank
+Discover          | 6011000000001028 | Declined         | 102              | Referral B
+Discover          | 6011000000001036 | Declined         | 103              | Referral A - Card reported lost/stolen
+Discover          | 6011000000002000 | Declined         | 200              | Communication Error
+JCB               | 3566000000000000 | Successful       | 00               | Successful transaction
+JCB               | 3566000000001016 | Declined         | 101              | Declined by the bank
+JCB               | 3566000000001024 | Declined         | 102              | Referral B
+JCB               | 3566000000001032 | Declined         | 103              | Referral A - Card reported lost/stolen
+JCB               | 3566000000002006 | Declined         | 200              | Communication Error
+Mastercard        | 5425230000004415 | Successful       | 00               | Successful transaction
+Mastercard        | 5114610000004778 | Declined         | 101              | Declined by the bank
+Mastercard        | 5114630000009791 | Declined         | 102              | Referral B
+Mastercard        | 5121220000006921 | Declined         | 103              | Referral A - Card reported lost/stolen
+Mastercard        | 5135020000005871 | Declined         | 200              | Communication Error
+Mastercard        | 5100000000000131 | Declined         | 111              | SCA Required
+Visa              | 4263970000005262 | Successful       | 00               | Successful transaction
+Visa              | 4000120000001154 | Declined         | 101              | Declined by the bank
+Visa              | 4000130000001724 | Declined         | 102              | Referral B
+Visa              | 4000160000004147 | Declined         | 103              | Referral A - Card reported lost/stolen
+Visa              | 4009830000001985 | Declined         | 200              | Communication Error
+Visa              | 4242420000000091 | Declined         | 111              | SCA Required
+
+
 ### Klarna
 
 Card Number      | CVV | Expiry Date
@@ -160,13 +244,17 @@ Card Number      | CVV | Expiry Date
 
 Test payment card details taken from the Klarna [developer documentation](https://developers.klarna.com/en/se+php/kco-v2/test-credentials).
 
-### Ogone
+### Monetico
 
-Card Type | Card Number
-:---------|:----------------
-Visa      | 4111111111111111
+The following cards are for [Monetico](https://www.monetico-paiement.fr/). See their [test card page](https://www.monetico-paiement.fr/fr/piloter-suivre/parametrage/environnement-de-test.html) for more details.
 
-Details about using test cards in Ogone can be found here: [Create and configure your Ogone Test Account](https://payment-services.ingenico.com/int/en/ogone/support/guides/user%20guides/test-account-creation).
+The card numbers below can be used for testing.
+
+Card Type | Card Number      | 3DS | Successful Authorisation
+:---------|:-----------------|:----|:------------------------
+Visa      | 0000010000000003 | N   | N
+Visa      | 0000010000000004 | Y   | N
+Visa      | 0000010000000005 | Y   | Y
 
 ### NetPay
 
@@ -185,7 +273,7 @@ Maestro             | 6759000968432575    | Expiry driven card
 Maestro             | 6759173972560846    | Expiry driven card
 Maestro int'l       | 5000008602179457569 | Expiry driven card
 Mastercard credit   | 5301250070000050    | Expiry driven card
-Mastercard credit   | 5454609899026213    | Expiry driven card 
+Mastercard credit   | 5454609899026213    | Expiry driven card
 Mastercard credit   | 5123456789012346    | Expiry driven card (3ds registered)
 Mastercard debit    | 5133333333333338    | Expiry driven card  (3ds not available)
 Mastercard debit    | 5111111111111118    | Expiry driven card (not 3ds registered)
@@ -195,6 +283,107 @@ Visa Credit         | 4715059999000437    | Expiry driven card credit
 Visa Debit          | 4917480000000008    | Expiry driven card
 Visa Debit          | 4539791001730106    | Expiry driven card (3ds registered)
 Visa Debit          | 4508750015741019    | Expiry driven card
+
+### Nuvei
+
+Nuvei provides test card numbers for simulating and testing transaction scenarios in the Nuvei integration environment. CVV and card expiry dates are mandatory, but can be any valid value.
+
+For non-3D-Secure transactions which return an approved result:
+
+Card Type        | Card Number      | Notes
+:----------------|:-----------------|:-------------------
+American Express | 375510513169537  | 
+American Express | 375510288656924  | 
+American Express | 375510379996452  | 
+American Express | 375510082116984  | 
+Mastercard       | 5101081046006034 | 
+Mastercard       | 5101084411423750 | 
+Mastercard       | 5333304500657872 | 
+Mastercard       | 5333308664112277 | 
+Mastercard       | 5550345228382224 | 
+Mastercard       | 5550347471347813 | 
+Mastercard       | 2222755234426838 | 
+Mastercard       | 2221004483162815 | 
+Visa             | 4761344136141390 | 
+Visa             | 4761201381475297 | 
+Visa             | 4159129252458086 | 
+Visa             | 4123407439043051 | 
+Visa             | 4001888687412469 | 
+Visa             | 4444493318246892 | 
+Visa             | 4000996174334475 | Partial approval
+Visa             | 5333608104136723 | Partial approval
+
+For non-3D-Secure transactions which return a declined result:
+
+Card Type        | Card Number                           | Decline Reason
+:----------------|:--------------------------------------|:-------------------
+American Express | 375521501910816                       | Decline
+American Express | 375522679892992                       | External Error in Processing
+American Express | 375523500980436                       | Acquirer Validation
+American Express | 375525991062202                       | Lost/Stolen
+American Express | 375526064276158 (Germany)             | Do Not Honor
+American Express | 375527639875136 (Ireland)             | Insufficient Funds
+American Express | 375528929838107 (Ireland)             | Exceeds Withdrawal Limit
+American Express | 375529856696120 (Ireland)             | Exceeds Withdrawal Frequency
+American Express | 375530796593260                       | Invalid Transaction
+American Express | 375531494255517 (Indonesia)           | Format Error
+American Express | 375532604034750                       | Issuer or Switch Inoperative
+American Express | 375533558061005 (Greece)              | Timeout/Retry
+American Express | 375534876707683 (Greece)              | Expired Card
+American Express | 375535264614027 (Greece)              | Transaction Not Permitted To Cardholder
+American Express | 375536629108788 (Greece)              | Transaction Not Permitted on Terminal
+American Express | 375537795464104 (Greece)              | Restricted Card
+American Express | 375538733297606 (Greece)              | Invalid CVV
+Mastercard       | 5333418445863914 (Russian Federation) | Decline
+Mastercard       | 5001638548736201 (UK)                 | Decline
+Mastercard       | 5118081410264525 (UK)                 | Soft Decline - Authentication is Advised
+Mastercard       | 5109486948867999 (US)                 | Soft Decline - Authentication is Advised
+Mastercard       | 5333423768173347 (US)                 | External Error in Processing
+Mastercard       | 5100976565928800 (UK)                 | External Error in Processing
+Mastercard       | 5333435197139699 (US)                 | Acquirer Validation
+Mastercard       | 5333452804487502 (US)                 | Lost/Stolen
+Mastercard       | 5333463046218753 (US)                 | Do Not Honor
+Mastercard       | 5333475572200849 (US)                 | Insufficient Funds
+Mastercard       | 5333482348715142 (US)                 | Exceeds Withdrawal Limit
+Mastercard       | 5333498929343773 (South Korea)        | Exceeds Withdrawal Frequency
+Mastercard       | 5333502383316074 (Puerto Rico)        | Invalid Transaction
+Mastercard       | 5333518577223892 (US)                 | Format Error
+Mastercard       | 5333527145351713 (Costa Rica)         | Issuer or Switch Inoperative
+Mastercard       | 5333532915594096 (US)                 | Timeout/Retry
+Mastercard       | 5333540337444022 (US)                 | Expired Card
+Mastercard       | 5333554636535091 (US)                 | Transaction Not Permitted To Cardholder
+Mastercard       | 5333562868563707 (US)                 | Transaction Not Permitted on Terminal
+Mastercard       | 5333562868563707 (US)                 | Restricted Card
+Mastercard       | 5333583123003909 (US)                 | Invalid CVV
+Visa             | 4008370896662369 (UK)                 | Decline
+Visa             | 4021937195658141 (UK)                 | Soft Decline - Authentication is Advised
+Visa             | 4217641329972469 (US)                 | Soft Decline - Authentication is Advised
+Visa             | 4000128449498204 (US)                 | External Error in Processing
+Visa             | 4000135814550378 (US)                 | Acquirer Validation
+Visa             | 4000157454627969 (US)                 | Lost/Stolen
+Visa             | 4000164166749263 (India)              | Do Not Honor
+Visa             | 4000173946194872 (India)              | Insufficient Funds
+Visa             | 4008384424370890 (UK)                 | Insufficient Funds
+Visa             | 4000189336416410 (India)              | Exceeds Withdrawal Limit
+Visa             | 4000196948974975 (India)              | Exceeds Withdrawal Frequency
+Visa             | 4000203016321921 (US)                 | Invalid Transaction
+Visa             | 4000212384978055 (US)                 | Format Error
+Visa             | 4000229544877670 (US)                 | Issuer or Switch Inoperative
+Visa             | 4000234977370839 (US)                 | Timeout/Retry
+Visa             | 4000247422310226 (US)                 | Expired Card
+Visa             | 4000254588011960 (US)                 | Transaction Not Permitted To Cardholder
+Visa             | 4000269084739575 (US)                 | Transaction Not Permitted on Terminal
+Visa             | 4000273652260030 (US)                 | Restricted Card
+
+Full details of Nuvei's test cards can be found on the [Testing Cards]([https://www.wepay.com/developer/reference/testing](https://docs.nuvei.com/documentation/guides/testing/testing-cards/) page of their documentation.
+
+### Ogone
+
+Card Type | Card Number
+:---------|:----------------
+Visa      | 4111111111111111
+
+Details about using test cards in Ogone can be found here: [Create and configure your Ogone Test Account](https://payment-services.ingenico.com/int/en/ogone/support/guides/user%20guides/test-account-creation).
 
 ### Pay360
 
@@ -215,9 +404,9 @@ Mastercard (Debit)  | 9900000000010407 | U   | N
 Mastercard (Credit) | 9901000000005133 | Y   | Y
 Mastercard (Credit) | 9901000000000019 | N   | Y
 Mastercard (Credit) | 9901000000010257 | U   | Y
-Mastercard (Credit) | 9901000000005281 | Y   | Y
-Mastercard (Credit) | 9901000000000167 | N   | Y
-Mastercard (Credit) | 9901000000010406 | U   | Y
+Mastercard (Credit) | 9901000000005281 | Y   | N
+Mastercard (Credit) | 9901000000000167 | N   | N
+Mastercard (Credit) | 9901000000010406 | U   | N
 Visa (Debit)        | 9902000000005132 | Y   | Y
 Visa (Debit)        | 9902000000000018 | N   | Y
 Visa (Debit)        | 9902000000010256 | U   | Y
@@ -231,7 +420,7 @@ Visa (Credit)       | 9903000000005289 | Y   | N
 Visa (Credit)       | 9903000000000165 | N   | N
 Visa (Credit)       | 9903000000010404 | U   | N
 
-The above test card details for Pay360 can be found on their [developers support website](https://paymentdeveloperdocs.com/test_card_numbers/).
+The above test card details for Pay360 can be found on their [developers support website](https://docs.pay360.com/getting-started/test-card-numbers/).
 
 ### PayPal
 
@@ -346,18 +535,12 @@ MasterCard (Prepaid) | 5105105105105100
 Visa                 | 4242424242424242 and 4012888888881881
 Visa (Debit)         | 4000056655665556
 
-### Trustpay Global
+### Trustpay Global (PinPay)
 
 http://trustpayglobal.com
 
 Card Type | Card Number         | Response
 :---------|:--------------------|:-------------------------------
-Visa      | 4012001036275556    | No Response From Visa Directory Server
-Visa      | 4012001038443335    | Cardholder Not Participating
-Visa      | 4012001038488884    | Unable to Verify Enrollment
-Visa      | 4012001036298889    | Invalid Response from Directory Server
-Visa      | 4012001036853337    | Invalid ACS Digital Signature
-Visa      | 4012001036983332    | Expired ACS Signing Certificate
 Visa      | 4012001037141112    | Successful Authentication via a 16-digit PAN
 Visa      | 4005559876540       | Successful Authentication via a 13-digit PAN
 Visa      | 4012010000000000009 | Successful Authentication via a 19-digit PAN
@@ -366,8 +549,16 @@ Visa      | 4012001037461114    | Authentication Failure
 Visa      | 4012001037484447    | Authentication Not Available
 Visa      | 4012001037490006    | Invalid Payer Authentication Response
 Visa      | 4012001037490014    | Valid 3-D Secure Message With Embedded Whitespace Characters
+Visa      | 4012001036275556    | No Response From Visa Directory Server
+Visa      | 4012001038443335    | Cardholder Not Participating
+Visa      | 4012001038488884    | Unable to Verify Enrollment
+Visa      | 4012001036298889    | Invalid Response from Directory Server
+Visa      | 4012001036853337    | Invalid ACS Digital Signature
+Visa      | 4012001036983332    | Expired ACS Signing Certificate
 
 Passing a transaction amount of `900` (*e.g.* `$9.00`) will result in the payment being declined.
+
+Use `123` as the CVV for a successful transaction and `999` for the card details to be rejected.
 
 ### WePay
 
