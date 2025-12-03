@@ -13,6 +13,7 @@ A list of available test payment cards for various payment gateways. Please feel
     - [ChargeBee](#chargebee)
     - [Concardis](#concardis)
     - [CyberSource](#cybersource)
+    - [dLocal](#dlocal)
     - [eMerchantPay](#emerchantpay)
     - [ePay](#epay)
     - [GlobalPayments](#globalpayments)
@@ -154,6 +155,18 @@ Mastercard              | 2222420000001113, 2222630000001125, and 55555555555544
 UATP                    | 135412345678911
 VISA                    | 4111111111111111
 
+### dLocal
+
+Further information can be obtained by contacting only.
+
+Card Number(s)   | Card Type   | Transaction Result
+:----------------|:----------- |:----------------------
+4556557955726624 | Visa        | successful transaction
+4556104160382032 | Visa        | transaction declined
+5333259155643223 | Master Card | successful transaction
+5328720384582224 | Master Card | transaction declined
+
+
 ### eMerchantPay
 
 Test cards for [www.emerchantpay.com](https://www.emerchantpay.com).
@@ -292,24 +305,24 @@ For non-3D-Secure transactions which return an approved result:
 
 Card Type        | Card Number      | Notes
 :----------------|:-----------------|:-------------------
-American Express | 375510513169537  | 
-American Express | 375510288656924  | 
-American Express | 375510379996452  | 
-American Express | 375510082116984  | 
-Mastercard       | 5101081046006034 | 
-Mastercard       | 5101084411423750 | 
-Mastercard       | 5333304500657872 | 
-Mastercard       | 5333308664112277 | 
-Mastercard       | 5550345228382224 | 
-Mastercard       | 5550347471347813 | 
-Mastercard       | 2222755234426838 | 
-Mastercard       | 2221004483162815 | 
-Visa             | 4761344136141390 | 
-Visa             | 4761201381475297 | 
-Visa             | 4159129252458086 | 
-Visa             | 4123407439043051 | 
-Visa             | 4001888687412469 | 
-Visa             | 4444493318246892 | 
+American Express | 375510513169537  |
+American Express | 375510288656924  |
+American Express | 375510379996452  |
+American Express | 375510082116984  |
+Mastercard       | 5101081046006034 |
+Mastercard       | 5101084411423750 |
+Mastercard       | 5333304500657872 |
+Mastercard       | 5333308664112277 |
+Mastercard       | 5550345228382224 |
+Mastercard       | 5550347471347813 |
+Mastercard       | 2222755234426838 |
+Mastercard       | 2221004483162815 |
+Visa             | 4761344136141390 |
+Visa             | 4761201381475297 |
+Visa             | 4159129252458086 |
+Visa             | 4123407439043051 |
+Visa             | 4001888687412469 |
+Visa             | 4444493318246892 |
 Visa             | 4000996174334475 | Partial approval
 Visa             | 5333608104136723 | Partial approval
 
